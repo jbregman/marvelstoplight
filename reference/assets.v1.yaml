@@ -7,9 +7,10 @@ info:
     url: 'https://github.com/jbregman/marvelstoplight'
     email: jbregman@gmail.com
   termsOfService: 'https://github.com/jbregman/marvelstoplight/README.MD'
+  description: Assets API for Stratejm
 servers:
   - url: 'http://localhost:3000'
-    description: Josh C Bregman
+    description: Dev
 paths:
   /assets:
     get:
@@ -57,3 +58,4 @@ components:
           tokenUrl: ''
           refreshUrl: ''
           scopes: {}
+      description: ''
