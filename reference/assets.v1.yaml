@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  title: assets
+  version: '1.0'
+  contact:
+    name: Josh Bregman
+    url: 'https://github.com/jbregman/marvelstoplight'
+    email: jbregman@gmail.com
+  termsOfService: 'https://github.com/jbregman/marvelstoplight/README.MD'
+servers:
+  - url: 'http://localhost:3000'
+    description: Josh C Bregman
+paths:
+  /assets:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: get-assets
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: query
+          description: Query String for Assets
+      description: This is the endpoint for getting assets
+components:
+  schemas:
+    Asset:
+      title: Asset
+      type: object
+      properties:
+        id:
+          type: string
+      x-examples:
+        Example Asset:
+          id: '1'
+      description: An asset in the system
+  securitySchemes:
+    API Key - 1:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: ''
+          tokenUrl: ''
+          refreshUrl: ''
+          scopes: {}
