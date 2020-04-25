@@ -18,6 +18,16 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Asset'
+              examples:
+                example-1:
+                  value:
+                    - id: '2'
       operationId: get-assets
       parameters:
         - schema:
